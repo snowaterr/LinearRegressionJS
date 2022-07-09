@@ -3,7 +3,7 @@ JavaScript的线性回归算法，支持多元拟合，采用最小二乘法
 
 算法来源 [jstat库](https://github.com/jstat/jstat)
 
-在库中添加了线性回归的API使得使用更便捷，使用示例如下：
+在库中添加了线性回归的API使得使用更便捷，修改后的库文件为[jstat@zim.js](https://github.com/snowaterr/LinearRegressionJS/blob/main/jstat%40zim.js)，使用示例如下：
 ```
 // 自变量，1维或2维数组
 var X = [   [1.0, 0.1],
