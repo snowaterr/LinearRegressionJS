@@ -35,13 +35,22 @@ console.log('[JStat.model]f test P-value: ' + model.f.pvalue) // -> 0.3306363671
 
 
 // 2、zim扩展的线性回归API
-var t=[1.1,2.3,3.5,4.8,5.9];
-var v=[ [1.1,0.9,1.2],
-    [2.1,1.9,2.4],
-    [2.9,3.2,3.7],
-    [3.5,3.8,4.6],
-    [4.8,5.8,6.9]];
 
-var LR2 = jStat.zim.LinearRegression(t, v);
-var predict = LR2.predict(50);
+// 自变量，1维或2维数组
+var X = [   [1.0, 0.1],
+            [2.0, 0.2],
+            [2.8, 0.3],
+            [4.1, 0.4],
+            [4.8, 0.5]]
+// 因变量，1维或2维数组
+var Y = [   [1.1, 0.9, 1.2],
+            [2.1, 1.9, 2.4],
+            [3.9, 3.2, 3.7],
+            [4.5, 3.8, 4.6],
+            [5.8, 5.8, 6.9]];
+
+// 建立线性回归模型
+var LRModel = jStat.zim.LinearRegression(X, Y);
+// 预测
+var predict = LRModel.predict([10,1]);
 console.log('%c[JStat.zim]LinearRegression Predict: ' + predict, 'background: #FFFF60; color: #0000FF');
